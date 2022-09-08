@@ -8,7 +8,7 @@ const Home = () => {
   console.log(`${BASE_URL}plants/`)
   useEffect(() => {
     const getPlants = async () => {
-      let res = await axios.get(`{BASE_URL}plants/`)
+      let res = await axios.get(`${BASE_URL}plants/`)
 
       console.log(res)
       setPlant(res.data)

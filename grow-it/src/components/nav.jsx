@@ -2,7 +2,10 @@ import { NavLink } from 'react-router-dom'
 
 const Nav = ()=>{
   return(
-    <NavLink to='/home'>Home</NavLink>
+    <div>
+    <NavLink className='nav_links' to='/home'>Home</NavLink>
+    <NavLink className='nav_links' to='/add-note'>Add A Note</NavLink>
+    </div>
   )
 }
 export default Nav 
