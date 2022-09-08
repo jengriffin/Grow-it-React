@@ -2,6 +2,9 @@ import { BASE_URL } from '../globals'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+
 
 
 const NewBlog =(props)=>{
@@ -31,9 +34,22 @@ const NewBlog =(props)=>{
   const handleSubmit = async (event) => {
     event.preventDefault()
     let res = await axios.post(`${BASE_URL}blogs/`, formState)
+    console.log(res)
     setFormState(initialState)
     navigate('/home')
   }
+  const [plant, setPlant] = useState([])
+
+console.log(`${BASE_URL}plants/`)
+useEffect(() => {
+  const getPlants = async () => {
+    let res = await axios.get(`${BASE_URL}plants/`)
+
+    console.log(res)
+    setPlant(res.data)
+  }
+  getPlants()
+}, [])
 return(
   <div className="form">
       <form onSubmit={handleSubmit}>
@@ -50,8 +66,17 @@ return(
           onChange={handleChange}
           value={formState.date}
           id = "date"
-          // placeholder= "YYYY/MM/DD"
+          
         />
+        <label>Plant:</label>
+        <select id='plant'>
+        {plant.map((plant) => (
+          <option 
+          key={plant.id}
+          value= {plant.name}
+          >
+        {plant.name}</option>))}
+        </select>
         <label htmlFor="body">Type Here:</label>
         <textarea
           id="body"
