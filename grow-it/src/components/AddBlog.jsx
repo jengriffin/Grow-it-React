@@ -7,7 +7,7 @@ import axios from 'axios'
 const NewBlog =(props)=>{
   let navigate=useNavigate()
   const[newblog, setNewBlog]=useState([])
-  const initState = {
+  const initialState = {
     plants:'',
     date:'',
     body: ''
@@ -15,9 +15,9 @@ const NewBlog =(props)=>{
   const [formState, setFormState] = useState(initialState)
   console.log(`${BASE_URL}/blogs/`)
   useEffect(()=>{
-    const getBlogs=async=>{
+    const getBlogs= async()=>{
       try{
-        let res=await axios.get(`${BASE_URL}/blogs/`)
+        let res= await axios.get(`${BASE_URL}/blogs/`)
         console.log(res.data)
         setNewBlog(res.data)
       }catch(eer){}
@@ -25,3 +25,4 @@ const NewBlog =(props)=>{
     getBlogs()
   },[])
 }
+export default NewBlog
