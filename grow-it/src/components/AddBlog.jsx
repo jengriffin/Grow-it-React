@@ -30,7 +30,7 @@ const NewBlog =(props)=>{
   }
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let res = await axios.post(`${BASE_URL}/blogs/`, formState)
+    let res = await axios.post(`${BASE_URL}blogs/`, formState)
     setFormState(initialState)
     navigate('/home')
   }
@@ -49,6 +49,7 @@ return(
         <input type="date" 
           onChange={handleChange}
           value={formState.date}
+          id = "date"
           // placeholder= "YYYY/MM/DD"
         />
         <label htmlFor="body">Type Here:</label>
