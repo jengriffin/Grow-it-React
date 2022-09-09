@@ -2,7 +2,7 @@ import { BASE_URL } from '../globals'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import CSRFTOKEN from '../csrftoken'
+import csrftoken from '../csrftoken'
 
 
 
@@ -10,8 +10,9 @@ const NewBlog =(props)=>{
   let navigate=useNavigate()
   const[newblog, setNewBlog]=useState([])
   const initialState = {
-    plants:'',
-    date:'',
+    title:'',
+    //plants:1,
+    // date:'',
     body: ''
   }
   const [formState, setFormState] = useState(initialState)
@@ -30,10 +31,30 @@ const NewBlog =(props)=>{
     console.log(event)
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
+  const handleIntChange = (event) => {
+    console.log(event)
+    const{id,value}=event.target
+    setFormState({ ...formState, [id]: parseInt(value) })
+  }
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let res = await axios.post(`${BASE_URL}blogs/`, formState)
-    console.log(res)
+    console.log(formState)
+    console.log(csrftoken)
+    await axios({
+      url:`${BASE_URL}blogs/`,
+      method:'POST',
+      data: formState,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrftoken,
+        'X-Requested-With': 'XMLHttpRequest', 
+        // 'Access-Control-Allow-Origin': '*'
+      },
+      
+    })
+
+    // console.log(res)
     
     setFormState(initialState)
     navigate('/')
@@ -50,10 +71,12 @@ useEffect(() => {
   }
   getPlants()
 }, [])
+console.log(plant)
 return(
   <div className="form">
       <form onSubmit={handleSubmit}>
-      <CSRFTOKEN />
+      {/* <CSRFTOKEN /> */}
+      
         <h1>New Note</h1>
         <label htmlFor="title">Title:</label>
         <input
@@ -62,22 +85,24 @@ return(
           onChange={handleChange}
           value={formState.title}
         />
-        <label htmlFor="date">Date:</label>
+        {/* <label htmlFor="date">Date:</label>
         <input type="date" 
           onChange={handleChange}
           value={formState.date}
           id = "date"
           
-        />
+        /> */}
         <label>Plant:</label>
-        <select id='plant'>
+        {/* <select id='plant'>
         {plant.map((plant) => (
           <option 
           key={plant.id}
-          value= {plant.name}
+          //value= {plant.id}
+          onChange={handleIntChange}
+          value={formState.plants}
           >
         {plant.name}</option>))}
-        </select>
+        </select> */}
         <label htmlFor="body">Type Here:</label>
         <textarea
           id="body"
