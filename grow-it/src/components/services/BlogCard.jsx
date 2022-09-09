@@ -1,6 +1,6 @@
-import { BASE_URL } from '../globals'
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+// import { BASE_URL } from '../globals'
+// import { useEffect, useState } from 'react'
+// import { useParams } from 'react-router-dom'
 const BlogCard =()=>{
   // const[blog, setBlog]=useState([])
 
@@ -14,7 +14,7 @@ const BlogCard =()=>{
 
 
 return(
-<div><h1>Comment id</h1></div>
+<h1>Comment id</h1>
 )
 
 
