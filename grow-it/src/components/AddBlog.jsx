@@ -11,8 +11,6 @@ const NewBlog =(props)=>{
   const[newblog, setNewBlog]=useState([])
   const initialState = {
     title:'',
-    //plants:1,
-    // date:'',
     body: ''
   }
   const [formState, setFormState] = useState(initialState)
@@ -31,11 +29,7 @@ const NewBlog =(props)=>{
     console.log(event)
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
-  const handleIntChange = (event) => {
-    console.log(event)
-    const{id,value}=event.target
-    setFormState({ ...formState, [id]: parseInt(value) })
-  }
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     console.log(formState)
@@ -54,7 +48,7 @@ const NewBlog =(props)=>{
       
     })
 
-    // console.log(res)
+
     
     setFormState(initialState)
     navigate('/')
@@ -85,24 +79,6 @@ return(
           onChange={handleChange}
           value={formState.title}
         />
-        {/* <label htmlFor="date">Date:</label>
-        <input type="date" 
-          onChange={handleChange}
-          value={formState.date}
-          id = "date"
-          
-        /> */}
-        <label>Plant:</label>
-        {/* <select id='plant'>
-        {plant.map((plant) => (
-          <option 
-          key={plant.id}
-          //value= {plant.id}
-          onChange={handleIntChange}
-          value={formState.plants}
-          >
-        {plant.name}</option>))}
-        </select> */}
         <label htmlFor="body">Type Here:</label>
         <textarea
           id="body"
