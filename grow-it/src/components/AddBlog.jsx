@@ -2,8 +2,7 @@ import { BASE_URL } from '../globals'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-axios.defaults.xsrfCookieName = 'csrftoken'
-axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+import CSRFTOKEN from '../csrftoken'
 
 
 
@@ -35,8 +34,9 @@ const NewBlog =(props)=>{
     event.preventDefault()
     let res = await axios.post(`${BASE_URL}blogs/`, formState)
     console.log(res)
+    
     setFormState(initialState)
-    navigate('/home')
+    navigate('/')
   }
   const [plant, setPlant] = useState([])
 
@@ -53,6 +53,7 @@ useEffect(() => {
 return(
   <div className="form">
       <form onSubmit={handleSubmit}>
+      <CSRFTOKEN />
         <h1>New Note</h1>
         <label htmlFor="title">Title:</label>
         <input
