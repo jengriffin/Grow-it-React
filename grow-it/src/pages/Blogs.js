@@ -19,6 +19,8 @@ const Blogs = () => {
       {blog.map((blog) => (
         <div key={blog.id}>
           <h3>{blog.title}</h3>
+          <p>{blog.body}</p>
+          <h5>{blog.date}</h5>
         </div>
       ))}
       <h1>Werk!</h1>
