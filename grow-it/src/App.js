@@ -6,6 +6,7 @@ import Nav from './components/nav'
 import Blogs from './pages/Blogs'
 import PostDelete from './pages/PostDelete'
 import PlantList from './pages/PlantList'
+import Plant from './pages/Plant'
 // import { Register } from './pages/Register'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<PostDelete />} />
         <Route path="/plants" element={<PlantList />} />
+        <Route path="/plant" element={<Plant />} />
       </Routes>
     </div>
   )

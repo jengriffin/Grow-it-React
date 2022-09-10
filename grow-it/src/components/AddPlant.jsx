@@ -6,24 +6,25 @@ import csrftoken from '../csrftoken'
 
 
 
-const NewBlog =(props)=>{
+const NewPlant=(props)=>{
   let navigate=useNavigate()
-  const[newblog, setNewBlog]=useState([])
+  const[newplant, setNewPlant]=useState([])
   const initialState = {
-    title:'',
-    body: ''
+    name:'',
+    image: '',
+    info: ''
   }
   const [formState, setFormState] = useState(initialState)
 
   useEffect(()=>{
-    const getBlogs= async()=>{
+    const getPlants= async()=>{
       try{
-        let res= await axios.get(`${BASE_URL}/blogs/`)
+        let res= await axios.get(`${BASE_URL}plants`)
         console.log(res.data)
-        setNewBlog(res.data)
+        setNewPlant(res.data)
       }catch(eer){}
     }
-    getBlogs()
+    getPlants()
   },[])
   const handleChange = (event) => {
     console.log(event)
@@ -35,7 +36,7 @@ const NewBlog =(props)=>{
     console.log(formState)
     console.log(csrftoken)
     await axios({
-      url:`${BASE_URL}blogs/`,
+      url:`${BASE_URL}plants/`,
       method:'POST',
       data: formState,
       headers: {
@@ -56,24 +57,31 @@ console.log(`${BASE_URL}plants/`)
 return(
   <div className="form">
       <form onSubmit={handleSubmit}>
-        <h1>New Note</h1>
-        <label htmlFor="title">Title:</label>
+        <h1>Add a Plant!</h1>
+        <label htmlFor="name">Name:</label>
         <input
           type="text"
-          id="title"
+          id="name"
           onChange={handleChange}
-          value={formState.title}
+          value={formState.name}
         />
-        <label htmlFor="body">Type Here:</label>
-        <textarea
-          id="body"
+        <label htmlFor="image">Picture:</label>
+        <input
+          type="text"
+          id="image"
           onChange={handleChange}
-          value={formState.body}
+          value={formState.image}
+        />
+        <label htmlFor="info">Info:</label>
+        <textarea
+          id="info"
+          onChange={handleChange}
+          value={formState.info}
         /> <div>
-        <button type="submit">Submit</button>
+        <button type="submit"><img src="https://www.freeiconspng.com/uploads/checkmark-png-5.png" /></button>
       </div>
         </form>
   </div>
 )
 }
-export default NewBlog
+export default NewPlant
