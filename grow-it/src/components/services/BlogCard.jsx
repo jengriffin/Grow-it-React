@@ -37,8 +37,8 @@ const BlogCard =()=>{
     console.log(formState)
     console.log(csrftoken)
     await axios({
-      url:`${BASE_URL}blogs/`,
-      method:'POST',
+      url:`${BASE_URL}blogs/${id}`,
+      method:'PUT',
       data: formState,
       headers: {
         'Accept': 'application/json',
