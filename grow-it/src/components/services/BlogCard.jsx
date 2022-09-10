@@ -51,13 +51,13 @@ const BlogCard =()=>{
     setFormState(initialState)
     navigate('/')
   }
-  const [plant, setPlant] = useState([])
+  
 
 
 return(
   <div className="form">
   <form onSubmit={handleSubmit}>
-  <h1>Update Note</h1>
+  <h1>{blog.title}</h1>
   <label htmlFor="title">Title:</label>
   <input
     type="text"
