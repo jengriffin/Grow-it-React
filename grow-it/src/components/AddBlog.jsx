@@ -43,13 +43,9 @@ const NewBlog =(props)=>{
         'Content-Type': 'application/json',
         'X-CSRFToken': csrftoken,
         'X-Requested-With': 'XMLHttpRequest', 
-        // 'Access-Control-Allow-Origin': '*'
       },
       
     })
-
-
-    
     setFormState(initialState)
     navigate('/')
   }
@@ -69,8 +65,6 @@ console.log(plant)
 return(
   <div className="form">
       <form onSubmit={handleSubmit}>
-      {/* <CSRFTOKEN /> */}
-      
         <h1>New Note</h1>
         <label htmlFor="title">Title:</label>
         <input

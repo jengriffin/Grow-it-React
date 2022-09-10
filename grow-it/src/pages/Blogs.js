@@ -11,6 +11,7 @@ const Blogs = (props) => {
   }
 
   console.log(`${BASE_URL}blogs/`)
+
   useEffect(() => {
     const getBlogs = async () => {
       let res = await axios.get(`${BASE_URL}blogs/`)
@@ -20,6 +21,7 @@ const Blogs = (props) => {
     }
     getBlogs()
   }, [props.blog])
+
   return (
     <div>
       {blog.map((blog) => (
