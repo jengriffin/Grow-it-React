@@ -5,7 +5,7 @@ import Blog from './pages/Blog'
 import Nav from './components/nav'
 import Blogs from './pages/Blogs'
 import PostDelete from './pages/PostDelete'
-import { Register } from './pages/Register'
+// import { Register } from './pages/Register'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/register" element={<Register />} /> */}
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<PostDelete />} />
       </Routes>

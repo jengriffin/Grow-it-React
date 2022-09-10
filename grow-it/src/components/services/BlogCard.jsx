@@ -19,7 +19,7 @@ const BlogCard =()=>{
   useEffect(() => {
     const selectedBlog = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/blogs/${id}`)
+        let res = await axios.get(`${BASE_URL}blogs/${id}`)
         setBlog(res.data)
       } catch (eer) {
       }
