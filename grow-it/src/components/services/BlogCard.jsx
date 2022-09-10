@@ -51,7 +51,11 @@ const BlogCard =()=>{
     setFormState(initialState)
     navigate('/')
   }
-  
+  const deleteBlog = async () => {
+    let res = await axios.delete(`${BASE_URL}blogs/${id}`, formState)
+    alert('You have successfully deleted the note!')
+    navigate('/')
+  }
 
 
 return(
@@ -72,6 +76,9 @@ return(
     value={formState.body}
   /> <div>
   <button type="submit">Submit</button>
+  <div>
+  <button onClick={deleteBlog}>Delete Note</button>
+  </div>
   </div>
   </form>
   </div>
