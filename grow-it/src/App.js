@@ -11,17 +11,19 @@ import Plant from './pages/Plant'
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        {/* <Route path="/register" element={<Register />} /> */}
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogs/:id" element={<PostDelete />} />
-        <Route path="/plants" element={<PlantList />} />
-        <Route path="/plant" element={<Plant />} />
-      </Routes>
+    <div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
+      <div className="App">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          {/* <Route path="/register" element={<Register />} /> */}
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:id" element={<PostDelete />} />
+          <Route path="/plants" element={<PlantList />} />
+          <Route path="/plant" element={<Plant />} />
+        </Routes>
+      </div>
     </div>
   )
 }
