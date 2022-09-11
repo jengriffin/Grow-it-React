@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { BASE_URL } from '../globals'
+import { NavLink } from 'react-router-dom'
 
 const PlantList = () => {
   const [plant, setPlant] = useState([])
@@ -17,6 +18,9 @@ const PlantList = () => {
   }, [])
   return (
     <div>
+      <div>
+        <NavLink to="/plant">+</NavLink>
+      </div>
       {plant.map((plant) => (
         <div key={plant.id}>
           <img src={plant.image} alt={plant.name} />
