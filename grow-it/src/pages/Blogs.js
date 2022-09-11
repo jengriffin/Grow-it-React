@@ -23,19 +23,18 @@ const Blogs = (props) => {
   }, [props.blog])
 
   return (
-    <div>
+    <div class="grid gap-1 grid-cols-3">
       {blog.map((blog) => (
         <div
-          className="recipe_grid"
+          class="container mx-auto bg-gray-100 rounded-xl shadow border p-8 m-10 hover:bg-green-100"
           onClick={() => showBlogs(blog)}
           key={blog.id}
         >
-          <h3>{blog.title}</h3>
-          <p>{blog.body}</p>
+          <h3 class="text-3xl font-semibold hover:font-bold">{blog.title}</h3>
+          <p class="truncate hover:text-clip">{blog.body}</p>
           <h5>{blog.date}</h5>
         </div>
       ))}
-      <h1>Werk!</h1>
     </div>
   )
 }
