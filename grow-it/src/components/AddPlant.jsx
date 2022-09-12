@@ -83,6 +83,7 @@ return(
           id="info"
           onChange={handleChange}
           value={formState.info}
+          
         />
         <div>
           <button type="submit"><img src="https://www.freeiconspng.com/uploads/checkmark-png-5.png" /></button>

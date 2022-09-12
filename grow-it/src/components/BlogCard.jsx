@@ -59,25 +59,39 @@ const BlogCard =()=>{
 
 
 return(
-  <div className="form">
+  <div className="form ">
   <form onSubmit={handleSubmit}>
+  <div class="grid gap-1 grid-cols-1 grid-rows-3">
+    <div class="grid justify-items-center text-3xl">
   <h1>{blog.title}</h1>
-  <label htmlFor="title">Title:</label>
+  <div class="text-2xl">
+  <h2>{blog.body}</h2>
+  </div>
+  
   <input
     type="text"
     id="title"
     onChange={handleChange}
     value={formState.title}
+    class="h-10 w-1/3 rounded-lg justify-self-center self-center text-.5xl placeholder:italic mt-1 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
+    placeholder="New title..."
   />
-  <label htmlFor="body">Type Here:</label>
+  </div>
+  <div class="grid justify-items-stretch">
+  
   <textarea
     id="body"
     onChange={handleChange}
     value={formState.body}
-  /> <div>
-  <button type="submit">Submit</button>
-  <div>
-  <button onClick={deleteBlog}>Delete Note</button>
+    class="h-40 w-1/2 rounded-lg justify-self-center text-.5xl placeholder:italic focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
+    placeholder="Update your note..."
+  /> <div></div>
+  <div class="grid gap-3 grid-cols-2 grid-rows-3">
+  <button type="submit"class="bg-green-100 rounded-lg justify-self-center h-full w-1/2">Update</button>
+  
+  <button onClick={deleteBlog}class="bg-green-100 rounded-lg justify-self-center h-full w-1/2">Delete Note</button>
+  
+  </div>
   </div>
   </div>
   </form>
