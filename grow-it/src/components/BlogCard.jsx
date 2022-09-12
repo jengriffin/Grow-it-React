@@ -1,8 +1,8 @@
-import { BASE_URL } from '../../globals'
+import { BASE_URL } from '../globals'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import csrftoken from '../../csrftoken'
+import csrftoken from '../csrftoken'
 import { useNavigate } from 'react-router-dom'
 const BlogCard =()=>{
   const[blog, setBlog]=useState([])
