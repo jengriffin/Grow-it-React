@@ -7,6 +7,7 @@ import Blogs from './pages/Blogs'
 import PostDelete from './pages/PostDelete'
 import PlantList from './pages/PlantList'
 import Plant from './pages/Plant'
+import PlantDelete from './pages/PlantDelete'
 // import { Register } from './pages/Register'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/blogs/:id" element={<PostDelete />} />
           <Route path="/plants" element={<PlantList />} />
           <Route path="/plant" element={<Plant />} />
+          <Route path="/plants/:id" element={<PlantDelete />} />
         </Routes>
       </div>
     </div>

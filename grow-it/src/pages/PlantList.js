@@ -11,7 +11,6 @@ const PlantList = () => {
     navigate(`/plants/${plants.id}`)
   }
 
-  console.log(`${BASE_URL}plants/`)
   useEffect(() => {
     const getPlants = async () => {
       let res = await axios.get(`${BASE_URL}plants/`)
