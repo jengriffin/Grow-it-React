@@ -2,6 +2,7 @@ import { BASE_URL } from '../globals'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 const Blogs = (props) => {
   let navigate = useNavigate()
   const [blog, setBlogs] = useState([])
@@ -24,6 +25,15 @@ const Blogs = (props) => {
 
   return (
     <div class="grid gap-1 grid-cols-3">
+      <div>
+        <NavLink to="/blog" class="col-end-4 col-span-1">
+          <img
+            src="https://img.icons8.com/color/2x/plus.png"
+            alt="a bright green plus so you can add a plant"
+            className="object-scale-down h-20 mx-auto"
+          />
+        </NavLink>
+      </div>
       {blog.map((blog) => (
         <div
           class="container mx-auto bg-gray-100 rounded-xl shadow border p-8 m-10 hover:bg-green-100"

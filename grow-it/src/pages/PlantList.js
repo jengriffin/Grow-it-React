@@ -27,6 +27,7 @@ const PlantList = () => {
           <img
             src="https://img.icons8.com/color/2x/plus.png"
             alt="a bright green plus so you can add a plant"
+            className="object-scale-down h-20 mx-auto"
           />
         </NavLink>
       </div>
