@@ -35,10 +35,10 @@ const PlantCard =(props) =>{
   }
 
   const handleSubmit = async (event) => {
-    const form_data = new FormData();
-    form_data.append('image', uploadFile);
-    form_data.append('name', formState.name);
-    form_data.append('info', formState.info);
+    // const form_data = new FormData();
+    // form_data.append('image', uploadFile);
+    // form_data.append('name', formState.name);
+    // form_data.append('info', formState.info);
     event.preventDefault()
     console.log(formState)
     console.log(csrftoken)
@@ -87,7 +87,7 @@ return(
   </div>
   <div class="grid justify-items-stretch">
   
-  <input type="file" onChange={(e) => setUploadFile(e.target.files[0])} />
+  {/* <input type="file" onChange={(e) => setUploadFile(e.target.files[0])} /> */}
   </div>
   <div class="grid gap-3 grid-cols-2 grid-rows-3">
   <button type="submit"class="bg-green-100 rounded-lg justify-self-center h-full w-1/2">Update</button>

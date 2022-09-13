@@ -46,6 +46,16 @@ const Home = () => {
           className="object-scale-down h-20 mx-auto"
         />
       </NavLink>
+      <NavLink
+        className="bg-green-100 rounded-lg justify-self-center h-full w-1/2"
+        to="/blog"
+      >
+        <img
+          src="https://img.icons8.com/stickers/344/insert-page.png"
+          alt="Add a note"
+          className="object-scale-down h-20 mx-auto"
+        />
+      </NavLink>
     </div>
   )
 }

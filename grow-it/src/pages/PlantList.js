@@ -23,7 +23,7 @@ const PlantList = () => {
   return (
     <div>
       <div>
-        <NavLink to="/plant" class="grid justify-items-right">
+        <NavLink to="/plant" class="float-right">
           <img
             src="https://img.icons8.com/color/2x/plus.png"
             alt="a bright green plus so you can add a plant"
