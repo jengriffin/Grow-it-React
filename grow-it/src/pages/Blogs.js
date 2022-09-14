@@ -11,13 +11,9 @@ const Blogs = (props) => {
     navigate(`/blogs/${blog.id}`)
   }
 
-  console.log(`${BASE_URL}blogs/`)
-
   useEffect(() => {
     const getBlogs = async () => {
       let res = await axios.get(`${BASE_URL}blogs/`)
-
-      console.log(res)
       setBlogs(res.data)
     }
     getBlogs()

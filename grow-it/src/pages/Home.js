@@ -1,15 +1,7 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import { BASE_URL } from '../globals'
-import { NavLink } from 'react-router-dom'
-import { useNavigate, Routes, Route } from 'react-router-dom'
-import Blogs from './Blogs'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const Home = () => {
-  const navigate = useNavigate
-  const notes = () => {
-    navigate('/blogs')
-  }
+  const navigate = useNavigate()
   const navBlog = () => {
     return (
       <button

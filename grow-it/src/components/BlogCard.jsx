@@ -28,14 +28,11 @@ const BlogCard =()=>{
   }, [])
 
   const handleChange = (event) => {
-    console.log(event)
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(formState)
-    console.log(csrftoken)
     await axios({
       url:`${BASE_URL}blogs/${id}`,
       method:'PUT',
@@ -66,6 +63,7 @@ return(
   <h1>{blog.title}</h1>
   <div class="text-2xl">
   <h2>{blog.body}</h2>
+  <h2>{blog.date}</h2>
   </div>
   
   <input
@@ -85,7 +83,7 @@ return(
     value={formState.body}
     class="h-40 w-1/2 rounded-lg justify-self-center text-.5xl placeholder:italic focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
     placeholder="Update your note..."
-  /> <div></div>
+  /> 
   <div class="grid gap-3 grid-cols-2 grid-rows-3">
   <button type="submit"class="bg-green-100 rounded-lg justify-self-center h-full w-1/2">Update</button>
   

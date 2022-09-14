@@ -24,7 +24,6 @@ const NewPlant = (props) => {
     const getPlants= async()=>{
       try{
         let res= await axios.get(`${BASE_URL}plants`)
-        console.log(res.data)
         setNewPlant(res.data)
       }catch(eer){}
     }

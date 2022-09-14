@@ -19,14 +19,12 @@ const NewBlog =(props)=>{
     const getBlogs= async()=>{
       try{
         let res= await axios.get(`${BASE_URL}/blogs/`)
-        console.log(res.data)
         setNewBlog(res.data)
       }catch(eer){}
     }
     getBlogs()
   },[])
   const handleChange = (event) => {
-    console.log(event)
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 

@@ -8,7 +8,6 @@ import PostDelete from './pages/PostDelete'
 import PlantList from './pages/PlantList'
 import Plant from './pages/Plant'
 import PlantDelete from './pages/PlantDelete'
-// import { Register } from './pages/Register'
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
-          {/* <Route path="/register" element={<Register />} /> */}
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:id" element={<PostDelete />} />
           <Route path="/plants" element={<PlantList />} />
