@@ -79,7 +79,7 @@ return(
         </div>
         <label htmlFor="image">Picture:</label>
 
-        <input type="file" onChange={(e) => setUploadFile(e.target.files[0])} />
+        <input type="file" class="h-40 w-1/2 rounded-lg justify-self-center text-1xl" onChange={(e) => setUploadFile(e.target.files[0])} />
 
         
         <textarea
@@ -89,7 +89,7 @@ return(
           class="h-40 w-1/2 rounded-lg justify-self-center text-2xl placeholder:italic focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
           placeholder='Info'
         />
-        <div>
+        <div class="grid justify-items-stretch">
           <button type="submit" class="bg-green-100 rounded-lg justify-self-center h-full w-1/2"><img src="https://www.freeiconspng.com/uploads/checkmark-png-5.png" class="object-scale-down h-20 mx-auto"/></button>
         </div>
         </div>
