@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Grow-It
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Date: 9/1/2022
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### By: Jennifer Griffin
 
-### `npm start`
+[GitHub](https://github.com/jengriffin) [LinkedIn](https://www.linkedin.com/in/jennifer-griffin-1223211b8/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **_Description_**
 
-### `npm run build`
+There are 2 universal truths about gardners: Every spring the smell of dirt and budding life gives them joy and the need to plant, and they are scattered brain. Each season, and planting year brings weekly if not daily challenges that require gardners to build a repository of homebrewed solutions. This app is a gardner's best friend. It allows gardners to not only keep track of what plants were planted and when, but allows the users to create a plant database and track personal notes on their plants progress through out the year. No more journals to lose, or faded garden stakes. Now you can make notes on the fly and always have them with you and organized.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+### **_Screenshots_**
+![CHD](assests/CHD.png)
+![ERD](assests/ERD.png)
+![HomePage](media/home page.png)
+![Notes](media/notes.png)
+![Form](media/add note form.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **_Technologies Used_**
 
-### `npm run eject`
+- JavaScript
+- CSS
+- HTML
+- Python
+- Djano
+- React
+- Postgres
+- TailwindCSS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **_Getting Started_**
+Fork and Clone
+npm i
+npm start
+#### ** A trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/oK7cl53p/grow-it).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **_Credits_**
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### **Markdown Guide:[GitHub](https://github.com/jengriffin/u1_hw_markdown)**
+**[Styling](https://medium.com/codingthesmartway-com-blog/how-to-use-tailwind-css-with-react-9dd78bbdc0e0)**
+**[File upload](https://www.geeksforgeeks.org/file-uploading-in-react-js/)**
