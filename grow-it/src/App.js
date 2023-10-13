@@ -7,7 +7,7 @@ import Blogs from './pages/Blogs'
 import PostDelete from './pages/PostDelete'
 import PlantList from './pages/PlantList'
 import Plant from './pages/Plant'
-// import { Register } from './pages/Register'
+import PlantDelete from './pages/PlantDelete'
 
 function App() {
   return (
@@ -17,11 +17,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
-          {/* <Route path="/register" element={<Register />} /> */}
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:id" element={<PostDelete />} />
           <Route path="/plants" element={<PlantList />} />
           <Route path="/plant" element={<Plant />} />
+          <Route path="/plants/:id" element={<PlantDelete />} />
         </Routes>
       </div>
     </div>

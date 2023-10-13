@@ -24,7 +24,6 @@ const NewPlant = (props) => {
     const getPlants= async()=>{
       try{
         let res= await axios.get(`${BASE_URL}plants`)
-        console.log(res.data)
         setNewPlant(res.data)
       }catch(eer){}
     }
@@ -66,26 +65,41 @@ console.log(`${BASE_URL}plants/`)
 return(
   <div className="form">
       <form onSubmit={handleSubmit}>
-        <h1>Add a Plant!</h1>
-        <label htmlFor="name">Name:</label>
+      <div class="grid gap-1 grid-cols-1 grid-rows-3">
+        <h1 class="text-center text-3xl">Add a Plant!</h1>
+        <div class="grid justify-items-stretch">
         <input
           type="text"
           id="name"
           onChange={handleChange}
           value={formState.name}
+          placeholder="Name"
+          class="h-10 w-1/3 rounded-lg justify-self-center self-center text-3xl placeholder:italic mt-1 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
         />
-        <label htmlFor="image">Picture:</label>
+        </div>
+        
+        <input type="file" class="h-20 w-1/2 rounded-lg 
+        justify-self-center text-1xl 
+        hover:file:bg-green-100
+        file:font-semibold
+        file:border-0
+        file:rounded-full" 
+        onChange={(e) => setUploadFile(e.target.files[0])} />
 
-        <input type="file" onChange={(e) => setUploadFile(e.target.files[0])} />
-
-        <label htmlFor="info">Info:</label>
+        
         <textarea
           id="info"
           onChange={handleChange}
           value={formState.info}
+          class="h-40 w-1/2 rounded-lg justify-self-center
+          text-2xl placeholder:italic 
+          focus:outline-none focus:border-sky-500 
+          focus:ring-sky-500 focus:ring-1"
+          placeholder='Info'
         />
-        <div>
-          <button type="submit"><img src="https://www.freeiconspng.com/uploads/checkmark-png-5.png" /></button>
+        <div class="grid justify-items-stretch">
+          <button type="submit" class="bg-green-100 rounded-lg justify-self-center h-full w-1/2 "><img src="https://www.freeiconspng.com/uploads/checkmark-png-5.png" class="object-scale-down h-20 mx-auto"/></button>
+        </div>
         </div>
       </form>
   </div>

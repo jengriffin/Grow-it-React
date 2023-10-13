@@ -1,4 +1,4 @@
-import BlogCard from '../components/services/BlogCard'
+import BlogCard from '../components/BlogCard'
 const PostDelete = () => {
   return <BlogCard />
 }
